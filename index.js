@@ -37,18 +37,51 @@
 ///////////////
 
 
-let obj = {
-    "Diamond Earrings": 980,
-    "Gold Watch": 2250,
-    "Pearl Necklace": 4650
-  }
+// let obj = {
+//     "Diamond Earrings": 980,
+//     "Gold Watch": 2250,
+//     "Pearl Necklace": 4650
+//   }
 
-function mostExpensive() {
-	let array = Object.entries(obj)
-	let expensive = array.map((item) => item[1])
-	let result = expensive.indexOf(Math.max(...expensive))
-	return `The most expensive one is the ${Object.keys(obj)[result]}`
-}
-console.log(mostExpensive());
+// function mostExpensive() {
+// 	let array = Object.entries(obj)
+// 	let expensive = array.map((item) => item[1])
+// 	let result = expensive.indexOf(Math.max(...expensive))
+// 	return `The most expensive one is the ${Object.keys(obj)[result]}`
+// }
+// console.log(mostExpensive());
 
 /////////////////////
+
+// let groceryArray = [
+//   { product: "Milk", quantity: 1, price: 1.50 },
+//   { product: "Eggs", quantity: 12, price: 0.10 },
+//   { product: "Bread", quantity: 2, price: 1.60 },
+//   { product: "Cheese", quantity: 1, price: 4.50 }
+// ]
+
+// function getTotalPrice() {
+//   let total = groceryArray.map( item => item.quantity * item.price)
+//   let totalNumber = total.reduce( (a, b) => a + b, 0)
+//   return Number(totalNumber.toFixed(1))
+// }
+
+// console.log('getTotalPrice :>> ', getTotalPrice());
+
+////////////////////////
+let array = ['A', 'B', 'A']
+console.log(array[0]);
+
+function getFrequencies(arr) {
+  let counter = 0
+  array.forEach(element => {
+    array.filter( i => {
+      if(i === element){
+        counter ++
+        console.log(i,counter);
+      }
+    })
+  });
+}
+
+console.log(getFrequencies());
