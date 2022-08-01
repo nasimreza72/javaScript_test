@@ -72,15 +72,13 @@
 let array = ['A', 'B', 'A']
 console.log(array[0]);
 
-function getFrequencies(arr) {
+function getFrequencies() {
   let counter = 0
   array.forEach(element => {
-    array.filter( i => {
-      if(i === element){
-        counter ++
-        console.log(i,counter);
-      }
-    })
+   let remove = array.filter( i => i !== element)
+   console.log('1st :>> ', remove[0], Number(remove.length));
+   let remove2 = remove.filter( ii => ii !== element)
+   console.log(remove2);
   });
 }
 
