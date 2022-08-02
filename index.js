@@ -83,3 +83,5 @@ function getFrequencies() {
 }
 
 console.log(getFrequencies());
+
+///////////////
