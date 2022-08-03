@@ -69,19 +69,50 @@
 // console.log('getTotalPrice :>> ', getTotalPrice());
 
 ////////////////////////
-let array = ['A', 'B', 'A']
-console.log(array[0]);
+// let array = ['A', 'B', 'A']
+// console.log(array[0]);
 
-function getFrequencies() {
-  let counter = 0
-  array.forEach(element => {
-   let remove = array.filter( i => i !== element)
-   console.log('1st :>> ', remove[0], Number(remove.length));
-   let remove2 = remove.filter( ii => ii !== element)
-   console.log(remove2);
-  });
-}
+// function getFrequencies() {
+//   let counter = 0
+//   array.forEach(element => {
+//    let remove = array.filter( i => i !== element)
+//    console.log('1st :>> ', remove[0], Number(remove.length));
+//    let remove2 = remove.filter( ii => ii !== element)
+//    console.log(remove2);
+//   });
+// }
 
-console.log(getFrequencies());
+// console.log(getFrequencies());
 
 ///////////////
+
+let strArr = ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+
+function FindIntersection() { 
+
+  let firstArray = strArr[0].split(",")
+  let secondArray = strArr[1].split(",")
+
+  let intersection = firstArray.filter(i => i == secondArray.filter(y => i === y))
+  
+  console.log(firstArray)
+  
+    return intersection; 
+  
+  }
+     
+  // keep this function call here 
+  console.log(FindIntersection());
+
+//////////////////////
+let sen = "kitchens kitchens"
+
+function LongestWord() {
+  // code goes here 
+ let fromStringToArray =  sen.split(" ")
+ let result = fromStringToArray.map( i => i.length)
+ console.log(result)
+  return Math.max(...result); 
+}
+
+console.log(LongestWord());
