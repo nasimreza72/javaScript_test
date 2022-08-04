@@ -86,33 +86,56 @@
 
 ///////////////
 
-let strArr = ["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]
+// let strArr = ["31, 3, 4, 7, 13", "31, 2, 4, 13, 15"]
+// console.log(strArr.includes("31, 2, 4, 13, 15"));
 
-function FindIntersection() { 
+// function FindIntersection() { 
 
-  let firstArray = strArr[0].split(",")
-  let secondArray = strArr[1].split(",")
+//   let firstArray = strArr[0].split(",")
+//   let secondArray = strArr[1].split(",")
 
-  let intersection = firstArray.filter(i => i == secondArray.filter(y => i === y))
-  
-  console.log(firstArray)
-  
-    return intersection; 
-  
-  }
+//   let intersection = firstArray.filter(i => i == secondArray.filter(y => i === y))
+
+//   console.log(Math.max(9,13,89));
+//   return intersection
+
+// }
+
      
-  // keep this function call here 
-  console.log(FindIntersection());
+//   // keep this function call here 
+//   console.log(FindIntersection());
 
-//////////////////////
-let sen = "kitchens kitchens"
+// //////////////////////
+// let sen = "Best Italians kitchens"
 
-function LongestWord() {
-  // code goes here 
- let fromStringToArray =  sen.split(" ")
- let result = fromStringToArray.map( i => i.length)
- console.log(result)
-  return Math.max(...result); 
-}
+// function LongestWord() {
+//   // code goes here 
+//  let fromStringToArray =  sen.split(" ")
+//  let result = fromStringToArray.map( i => i.length)
 
-console.log(LongestWord());
+//  console.log(result)
+//   return Math.max(...result); 
+// }
+
+// console.log(LongestWord());
+
+// let test = [0, 12, 19].every((i , index) => i>0)
+
+// console.log(test)
+
+/////////////
+
+let sentence = "summer"
+let count = []
+
+let sentence1 = sentence.split("")
+
+let makeArray = sentence1.map( i => {
+  if(i==sentence1.forEach(e => i == e)){
+   count.push(e)
+  console.log(count);
+  }
+})
+
+console.log(makeArray);
+
