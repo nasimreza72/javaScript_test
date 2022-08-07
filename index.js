@@ -1,6 +1,15 @@
-//////////// Get length of a String
+///////// Find odd or even Number
+
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(item => item % 2 === 0);
+console.log("evens number :>", evens); // [2, 4]
+
+/////////// Get length of a Number
 
 let num = 535873375657;
+console.log("lenght of a string :>>", String(num).length);
+
+/// or
 
 function num_of_digits() {
   return String(num).split("").length;
@@ -16,29 +25,29 @@ function minMax() {
 }
 console.log("lowest number :>>", minMax());
 
-///////////////// Filter an Array which includes only Number
+///////////////// Filter or Find an Array which includes only Number and used sort()
 
-let mixArray = ["asde234", "a34de3", "swer", "34", "wwev"];
+let mixedArray = ["a1sde234", "a34de3", "swer", "34", "wwev"];
 
 function numInStr() {
   let arrayOfNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   let newArray = [];
-  mixArray.filter((aa) => {
+  mixedArray.find((aa) => {
     let nn = aa
       .split("")
-      .filter((b) => b == arrayOfNumber.filter((i) => String(i) == b));
-    if (nn.length > 0) {
-      newArray.push(a);
+      .find((b) => b == arrayOfNumber.find((i) => String(i) == b));
+    if (nn) {
+      newArray.push(aa);
     }
   });
-  return newArray;
+  return newArray.sort();
 }
 console.log("Array includes number :>>", numInStr());
 
 /////////////// Find most expensive jewelry from the Object
 
 let obj = {
-  "Diamond Earrings": 980,
+  "Diamond Earrings": 5980,
   "Gold Watch": 2250,
   "Pearl Necklace": 4650,
 };
@@ -85,7 +94,7 @@ console.log("FindIntersection :>>", FindIntersection());
 
 /////////// Counting frequency of characters in a string using JavaScript
 
-let sentence = "summer rrr is coming";
+let sentence = "finally summer is coming apple";
 
 let rep = sentence.replaceAll(" ", "");
 console.log(rep);
@@ -98,3 +107,48 @@ let counter = () => {
 };
 
 console.log(counter());
+
+///////////// check if between every 2 numbers sum is 10 and includes ??? print true 
+
+let str = "ac??c7ss???s34rr???685"
+
+function QuestionsMarks() { 
+	var res=false;
+	for(var i=0;i<str.length;i++){
+		for(var j=i+1;j<str.length;j++){
+			if(Number(str[i])+Number(str[j])===10){
+				res=true;
+				if(str.slice(i,j).split('?').length-1<3){
+					return false
+				}
+			}
+		}
+	}
+	return res;
+}
+   
+console.log(QuestionsMarks());
+
+//////////// compare between 2 Array's Math.max and Math.min and then print true or false
+
+let arr1 = [1, 2, 3, 4]
+let arr2 = [0, 6]
+
+function canNest(arr1, arr2) {
+	if( (Math.min(...arr1)> Math.min(...arr2)) && (Math.max(...arr1)< Math.max(...arr2)) ){
+    return true
+  }
+  return  false
+}
+
+
+/////////////// 
+
+let n = 2483
+
+function squareDigits() {
+	return Number(String(n).split("").map(item => Number(item)*Number(item)).join().replaceAll(",", ""))
+}
+console.log(squareDigits());
+
+
