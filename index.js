@@ -221,3 +221,58 @@ function StringChallenge(str) {
 }
 
 console.log(StringChallenge("3.68"));
+
+/////////////  Length of a Nested Array
+
+let testArray = [1, [2, [3, [4, [5, 6]]]]]
+console.log(String(testArray).replaceAll(",","").length);
+
+///////////  Modify nested Array and add 100 to each nested element.
+
+function getLength(arr) {
+  let result = arr.map(item => {
+    return item.length > 1 ?
+      item.map(i=> {
+      return i.length > 1 ?
+        i.map(ii=> ii.length>1 ?
+           ii.map(iii => iii.length>1 ?
+             iii.map(iiii => iiii+100) 
+             :iii+100 ) 
+           :ii+100 ) 
+        :i+100
+    }) 
+     :item+100
+  })
+  return String(result).replaceAll(",", " ")
+}
+
+console.log('getLength :>> ', getLength([1, [2, [3, [4, 5, [6, 7], [8, 9]]]]]))
+
+//////////  Create a function that, given a string with at least three characters, returns an array of its: 1. Length 2. First Character and Last Character 3. Middle character if odd number or else 2 character for even number. 
+
+// allAboutStrings("LARA") ➞ [4, "L", "A", "AS", "@ index 3"]
+
+// allAboutStrings("Computer") ➞ [8, "C", "r", "pu", "not found"]
+
+// allAboutStrings("Science") ➞ [7, "S", "e", "e", "@ index 5"]
+
+function allAboutStrings(str) {
+
+  let resultArray = []
+
+  resultArray.push(str.length)
+  resultArray.push(str[0].toUpperCase())
+  resultArray.push(str[str.length-1])
+  let getMiddleChar = str.length % 2 == 0 ? str.substring(str.length/2-1 , str.length/2+1) : str[Math.floor(str.length/2)]
+  resultArray.push(getMiddleChar)
+  let findSecondCharacter = str.split("").filter(i => i == str.split("")[1])[1]
+  let indexOfLetter = findSecondCharacter ?  (str.replace(str[1], "").indexOf(str[1]))+1 : "not found"
+  resultArray.push(`@ index ${indexOfLetter}`)
+
+  return resultArray;
+}
+
+console.log("AllAboutStrings", allAboutStrings("Science"));
+
+
+
