@@ -274,5 +274,22 @@ function allAboutStrings(str) {
 
 console.log("AllAboutStrings", allAboutStrings("Science"));
 
+///////////////  First Letter Shift
 
+// shiftSentence("create a function") ➞ "freate c aunction"
+
+// shiftSentence("it should shift the sentence") ➞ "st ihould shift she tentence"
+
+// shiftSentence("the output is not very legible") ➞ "lhe tutput os iot nery vegible"
+
+// shiftSentence("edabit") ➞ "edabit"
+
+
+function shiftSentence(str) {
+	let makeArray = str.split(" ").map((i, index)=> 
+  {return str.split(" ")[str.split(" ").length <= index+1 ? 0 : index+1]})
+  console.log("makeArray", makeArray);
+}
+
+console.log('shiftSentence', shiftSentence("it should shift the sentence"));
 
