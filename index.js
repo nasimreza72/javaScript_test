@@ -293,7 +293,3 @@ function shiftSentence(str) {
 
 console.log('shiftSentence', shiftSentence("it should shift the sentence"));
 
-/////// new exercise
-
-
-
