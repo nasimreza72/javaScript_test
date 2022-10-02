@@ -292,3 +292,28 @@ function shiftSentence(str) {
 }
 
 console.log('shiftSentence', shiftSentence("it should shift the sentence"));
+
+
+//////////////////
+
+// 🦁🐱 Count Animals 🐶🐺
+
+// Mubashir needs your help to find out number of animals hidden in a given string txt.
+
+// You are provided with an array of animals given below:
+
+const animals = ["dog", "cat", "bat", "cock", "cow", "pig",
+"fox", "ant", "bird", "lion", "wolf", "deer", "bear",
+"frog", "hen", "mole", "duck", "goat"]
+
+function countAnimals(txt) {
+  let array = []
+  let count = 0
+	for (let i = 0; i < animals.length; i++) {
+
+    count+= txt.split("").length
+  }
+ return count
+}
+
+console.log(countAnimals("goatcode"));
