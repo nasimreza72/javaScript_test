@@ -317,3 +317,12 @@ function countAnimals(txt) {
 }
 
 console.log(countAnimals("goatcode"));
+
+const user = {
+  name: "Nasim",
+  profession: "Developer"
+}
+
+console.log(user);
+
+delete user.profession
