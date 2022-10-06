@@ -326,3 +326,5 @@ const user = {
 console.log(user);
 
 delete user.profession
+
+console.log(user);
