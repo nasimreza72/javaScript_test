@@ -323,7 +323,6 @@ const user = {
   profession: "Developer"
 }
 
-console.log(user);
 
 delete user.profession
 
