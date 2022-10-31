@@ -323,7 +323,5 @@ const user = {
   profession: "Developer"
 }
 
-
 delete user.profession
 
-console.log(usee)
